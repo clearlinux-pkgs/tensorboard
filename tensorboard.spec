@@ -16,7 +16,6 @@ BuildRequires : pip
 BuildRequires : python-dev
 BuildRequires : python3-dev
 BuildRequires : setuptools
-BuildRequires : bazel openjdk-dev
 
 %description
 # TensorBoard ![Travis build status](https://travis-ci.org/tensorflow/tensorboard.svg?branch=master)
@@ -30,12 +29,14 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
 export SOURCE_DATE_EPOCH=1503005760
-bazel build tensorboard:tensorboard
 
 
 %install
 export SOURCE_DATE_EPOCH=1503005760
 rm -rf %{buildroot}
+pip3 install --no-deps --force-reinstall  --root %{buildroot} %{SOURCE1}
 
 %files
 %defattr(-,root,root,-)
+/usr/lib/python3.6/site-packages/
+/usr/bin/tensorboard
