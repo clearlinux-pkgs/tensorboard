@@ -1,6 +1,6 @@
 Name     : tensorboard
 Version  : 0.1.4
-Release  : 2
+Release  : 3
 URL      : https://github.com/tensorflow/tensorboard/archive/0.1.4.tar.gz
 Source0  : https://github.com/tensorflow/tensorboard/archive/0.1.4.tar.gz
 Source1  : http://localhost/tensorflow/tensorflow_tensorboard-0.1.4-py3-none-any.whl
