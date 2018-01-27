@@ -1,9 +1,9 @@
 Name     : tensorboard
-Version  : 0.4.0rc2
+Version  : 1.5.0
 Release  : 3
-URL      : https://github.com/tensorflow/tensorboard/archive/0.4.0-rc2.tar.gz
-Source0  : https://github.com/tensorflow/tensorboard/archive/0.4.0-rc2.tar.gz
-Source1  : https://pypi.python.org/packages/df/34/83dfbb2d5d3d89804e8e41effc9700c99c1d02158b4409f5c358e6fa0155/tensorflow_tensorboard-0.4.0rc2-py3-none-any.whl
+URL      : https://github.com/tensorflow/tensorboard/archive/1.5.0.tar.gz
+Source0  : https://github.com/tensorflow/tensorboard/archive/1.5.0.tar.gz
+Source1  : https://localhost/tensorflow/tensorflow_tensorboard-1.5.0-py3-none-any.whl
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -17,7 +17,7 @@ BuildRequires : setuptools
 # TensorBoard ![Travis build status](https://travis-ci.org/tensorflow/tensorboard.svg?branch=master)
 
 %prep
-%setup -q -n tensorboard-0.4.0-rc2
+%setup -q -n tensorboard-1.5.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
