@@ -1,9 +1,9 @@
 Name     : tensorboard
 Version  : 1.5.0
-Release  : 3
+Release  : 4
 URL      : https://github.com/tensorflow/tensorboard/archive/1.5.0.tar.gz
 Source0  : https://github.com/tensorflow/tensorboard/archive/1.5.0.tar.gz
-Source1  : https://localhost/tensorflow/tensorflow_tensorboard-1.5.0-py3-none-any.whl
+Source1  : http://localhost/tensorflow/tensorflow_tensorboard-1.5.0-py3-none-any.whl
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
