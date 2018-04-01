@@ -1,9 +1,9 @@
 Name     : tensorboard
-Version  : 1.5.0
+Version  : 1.7.0
 Release  : 5
-URL      : https://github.com/tensorflow/tensorboard/archive/1.5.0.tar.gz
-Source0  : https://github.com/tensorflow/tensorboard/archive/1.5.0.tar.gz
-Source1  : http://localhost/tensorflow/tensorflow_tensorboard-1.5.0-py3-none-any.whl
+URL      : https://github.com/tensorflow/tensorboard/archive/1.7.0.tar.gz
+Source0  : https://github.com/tensorflow/tensorboard/archive/1.7.0.tar.gz
+Source1  : http://localhost/tensorflow/tensorboard-1.7.0-py3-none-any.whl
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -17,7 +17,7 @@ BuildRequires : setuptools
 # TensorBoard ![Travis build status](https://travis-ci.org/tensorflow/tensorboard.svg?branch=master)
 
 %prep
-%setup -q -n tensorboard-1.5.0
+%setup -q -n tensorboard-1.7.0
 
 %build
 export http_proxy=http://127.0.0.1:9/

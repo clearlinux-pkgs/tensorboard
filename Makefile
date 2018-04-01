@@ -1,5 +1,5 @@
 PKG_NAME := tensorboard
-URL := https://github.com/tensorflow/tensorboard/archive/0.1.4.tar.gz
+URL := https://github.com/tensorflow/tensorboard/archive/1.7.0.tar.gz
 
 
 include ../common/Makefile.common
