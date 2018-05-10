@@ -1,6 +1,6 @@
 Name     : tensorboard
 Version  : 1.7.0
-Release  : 5
+Release  : 6
 URL      : https://github.com/tensorflow/tensorboard/archive/1.7.0.tar.gz
 Source0  : https://github.com/tensorflow/tensorboard/archive/1.7.0.tar.gz
 Source1  : http://localhost/tensorflow/tensorboard-1.7.0-py3-none-any.whl
