@@ -1,0 +1,18 @@
+--- tensorboard-1.9.0/tensorboard/pip_package/build_pip_package.sh~	2018-06-13 17:43:37.000000000 +0000
++++ tensorboard-1.9.0/tensorboard/pip_package/build_pip_package.sh	2018-07-07 23:03:41.585298613 +0000
+@@ -92,12 +92,12 @@
+ 
+ # Require wheel for bdist_wheel command, and setuptools 36.2.0+ so that
+ # env markers are handled (https://github.com/pypa/setuptools/pull/1081)
+-pip install -qU wheel 'setuptools>=36.2.0'
++#pip install -qU wheel 'setuptools>=36.2.0'
+ 
+ python setup.py bdist_wheel --python-tag py2 >/dev/null
+ python setup.py bdist_wheel --python-tag py3 >/dev/null
+ 
+-smoke 2
+-smoke 3
++#smoke 2
++#smoke 3
+ 
+ ls -hal "$PWD/dist"
