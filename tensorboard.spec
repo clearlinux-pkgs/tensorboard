@@ -74,6 +74,39 @@ Source66 : https://repo1.maven.org/maven2/com/google/inject/guice/4.1.0/guice-4.
 Source67 : https://repo1.maven.org/maven2/org/json/json/20160212/json-20160212.jar
 Source68 : https://repo1.maven.org/maven2/com/ibm/icu/icu4j/57.1/icu4j-57.1.jar
 Source69 : https://repo1.maven.org/maven2/org/ow2/asm/asm-tree/6.0/asm-tree-6.0.jar
+Source70 : https://repo1.maven.org/maven2/com/google/jsinterop/jsinterop-annotations/1.0.1/jsinterop-annotations-1.0.1.jar
+Source71 : https://repo1.maven.org/maven2/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.jar
+Source72 : https://repo1.maven.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0.jar
+Source73 : https://github.com/google/closure-library/archive/v20180405.tar.gz
+Source74 : http://nodejs.org/dist/v6.9.1/node-v6.9.1-linux-x64.tar.xz
+Source75 : https://raw.githubusercontent.com/google/closure-compiler/v20180402/contrib/externs/polymer-1.0.js
+Source76 : https://github.com/PolymerElements/paper-tabs/archive/v2.1.0.tar.gz
+# https://github.com/PolymerElements/paper-toolbar/archive/v2.1.0.tar.gz
+Source77 :  v2_1_0.tar.gz
+Source78 : https://github.com/webcomponents/webcomponentsjs/archive/v0.7.24.tar.gz
+Source79 : https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/ebc69904eb78f94030d5d517b42db20867f679c0/chai/chai.d.ts
+Source80 : https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/5d0f2126c8dac8fce0ff020218aea06607213b0d/google.analytics/ga.d.ts
+Source81 : https://github.com/PolymerElements/paper-checkbox/archive/v2.0.3.tar.gz
+Source82 : https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/efd40e67ff323f7147651bdbef03c03ead7b1675/lodash/lodash.d.ts
+Source83 : https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/ebc69904eb78f94030d5d517b42db20867f679c0/mocha/mocha.d.ts
+#github.com/PolymerElements/paper-button/archive/v2.1.0.tar.gz
+Source84 : v2_1_0_2.tar.gz
+Source85 : https://github.com/PolymerElements/paper-icon-button/archive/v2.2.0.tar.gz
+# https://github.com/PolymerElements/paper-radio-group/archive/v2.2.0.tar.gz
+Source86 : v2_2_0.tar.gz
+# https://github.com/PolymerElements/iron-flex-layout/archive/v2.0.3.tar.gz
+Source87 : v2_0_3.tar.gz
+Source88 : https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/708609e0764daeb5eb64104af7aca50c520c4e6e/sinon/sinon.d.ts
+Source89 : https://github.com/PolymerElements/paper-dialog/archive/v2.1.1.tar.gz
+Source90 : https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/a872802c0c84ba98ff207d5e673a1fa867c67fd6/polymer/polymer.d.ts
+Source91 : https://github.com/PolymerElements/paper-header-panel/archive/v1.1.7.tar.gz
+# https://github.com/PolymerElements/iron-icons/archive/v2.1.1.tar.gz
+Source92 : v2_1_1.tar.gz
+Source93 : https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/8cb9ee3fdfe352cfef672bdfdb5f9c428f915e9f/threejs/three.d.ts
+Source94 : https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/dc27c3788c00d279ae5ff61e8e2dfd568aae5e8e/types/d3-timer/index.d.ts
+Source95 : https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/46719185c564694c5583c4b7ad94dbb786ecad46/webcomponents.js/webcomponents.js.d.ts
+# https://github.com/PolymerElements/paper-spinner/archive/v2.1.0.tar.gz
+Source96: v2_1_0_3.tar.gz
 
 Source100 : https://fonts.gstatic.com/s/roboto/v18/uYECMKoHcO9x1wdmbyHIm3-_kf6ByYO6CLYdB4HQE-Y.woff2
 Source101 : https://fonts.gstatic.com/s/roboto/v18/sTdaA6j0Psb920Vjv-mrzH-_kf6ByYO6CLYdB4HQE-Y.woff2
@@ -228,6 +261,34 @@ InstallCache %{SOURCE66}
 InstallCache %{SOURCE67}
 InstallCache %{SOURCE68}
 InstallCache %{SOURCE69}
+InstallCache %{SOURCE70}
+InstallCache %{SOURCE71}
+InstallCache %{SOURCE72}
+InstallCache %{SOURCE73}
+InstallCache %{SOURCE74}
+InstallCache %{SOURCE75}
+InstallCache %{SOURCE76}
+InstallCache %{SOURCE77}
+InstallCache %{SOURCE78}
+InstallCache %{SOURCE79}
+InstallCache %{SOURCE80}
+InstallCache %{SOURCE81}
+InstallCache %{SOURCE82}
+InstallCache %{SOURCE83}
+InstallCache %{SOURCE84}
+InstallCache %{SOURCE85}
+InstallCache %{SOURCE86}
+InstallCache %{SOURCE87}
+InstallCache %{SOURCE88}
+InstallCache %{SOURCE89}
+InstallCache %{SOURCE90}
+InstallCache %{SOURCE91}
+InstallCache %{SOURCE92}
+InstallCache %{SOURCE93}
+InstallCache %{SOURCE94}
+InstallCache %{SOURCE95}
+InstallCache %{SOURCE96}
+
 
 
 
