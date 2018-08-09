@@ -1,8 +1,8 @@
 Name     : tensorboard
-Version  : 1.9.0
+Version  : 1.10.0
 Release  : 8
-URL      : https://github.com/tensorflow/tensorboard/archive/1.9.0.tar.gz
-Source0  : https://github.com/tensorflow/tensorboard/archive/1.9.0.tar.gz
+URL      : https://github.com/tensorflow/tensorboard/archive/1.10.0.tar.gz
+Source0  : https://github.com/tensorflow/tensorboard/archive/1.10.0.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -25,8 +25,8 @@ BuildRequires : python-core
 Source9 : http://localhost/tensorflow/buildcache.tar.xz
 
 
-Source10 : https://github.com/tensorflow/tensorflow/archive/3128b43eb0bf37ac3c49cb22a6e1789d8ea346e8.tar.gz
-Source11 : https://github.com/google/protobuf/archive/v3.5.1.tar.gz
+Source10 : https://github.com/tensorflow/tensorflow/archive/9752b117ff63f204c4975cad52b5aab5c1f5e9a9.tar.gz
+Source11 : https://github.com/google/protobuf/archive/v3.6.0.tar.gz
 Source12 : https://raw.githubusercontent.com/catapult-project/catapult/237aea8b58a37a2991318b6a0db60d84078e5f7e/trace_viewer_full.html
 Source13 : https://pypi.python.org/packages/b7/7f/44d3cfe5a12ba002b253f6985a4477edfa66da53787a2a838a40f6415263/Werkzeug-0.11.10.tar.gz
 Source14 : https://github.com/google/closure-compiler/archive/v20180402.tar.gz
@@ -40,12 +40,13 @@ Source21 : http://maven.ibiblio.org/maven2/com/ibm/icu/icu4j/57.1/icu4j-57.1.jar
 Source22 : https://github.com/google/closure-library/archive/v20180405.tar.gz
 Source23 : http://nodejs.org/dist/v6.9.1/node-v6.9.1-linux-x64.tar.xz
 Source24 : https://github.com/PolymerElements/paper-card/archive/v1.1.6.tar.gz
+Source25 : https://github.com/bazelbuild/rules_closure/archive/0.7.0.tar.gz
 
 %description
 # TensorBoard ![Travis build status](https://travis-ci.org/tensorflow/tensorboard.svg?branch=master)
 
 %prep
-%setup -q -n tensorboard-1.9.0
+%setup -q -n tensorboard-1.10.0
 %patch1 -p1
 
 %build
@@ -82,6 +83,7 @@ InstallCache %{SOURCE21}
 InstallCache %{SOURCE22}
 InstallCache %{SOURCE23}
 InstallCache %{SOURCE24}
+InstallCache %{SOURCE25}
 
 
 bazel clean
@@ -93,7 +95,7 @@ bazel run //tensorboard/pip_package:build_pip_package
 %install
 export SOURCE_DATE_EPOCH=1503005760
 rm -rf %{buildroot}
-pip3 install --no-deps --force-reinstall  --root %{buildroot} /tmp/tensorboard/dist/tensorboard-1.9.0-py3-none-any.whl
+pip3 install --no-deps --force-reinstall  --root %{buildroot} /tmp/tensorboard/dist/tensorboard-1.10.0-py3-none-any.whl
 
 %files
 %defattr(-,root,root,-)
