@@ -8,6 +8,7 @@ Group    : Development/Tools
 License  : Apache-2.0
 
 Patch1: nonetwork.patch
+Patch2: bazeltrace.patch
 
 BuildRequires : pbr
 BuildRequires : pip
@@ -40,7 +41,14 @@ Source21 : http://maven.ibiblio.org/maven2/com/ibm/icu/icu4j/57.1/icu4j-57.1.jar
 Source22 : https://github.com/google/closure-library/archive/v20180405.tar.gz
 Source23 : http://nodejs.org/dist/v6.9.1/node-v6.9.1-linux-x64.tar.xz
 Source24 : https://github.com/PolymerElements/paper-card/archive/v1.1.6.tar.gz
-Source25 : https://github.com/bazelbuild/rules_closure/archive/0.7.0.tar.gz
+Source25 : https://github.com/bazelbuild/rules_closure/archive/0.8.0.tar.gz
+Source26 : https://repo1.maven.org/maven2/com/google/dagger/dagger/2.14.1/dagger-2.14.1.jar
+Source27 : https://mirror.bazel.build/repo1.maven.org/maven2/com/google/dagger/dagger-compiler/2.14.1/dagger-compiler-2.14.1.jar
+Source28 : https://mirror.bazel.build/repo1.maven.org/maven2/com/google/googlejavaformat/google-java-format/1.5/google-java-format-1.5.jar
+Source29 : https://repo1.maven.org/maven2/com/squareup/javapoet/1.9.0/javapoet-1.9.0.jar
+Source30 : https://repo1.maven.org/maven2/com/google/dagger/dagger-producers/2.14.1/dagger-producers-2.14.1.jar
+Source31 : https://repo1.maven.org/maven2/com/google/dagger/dagger-spi/2.14.1/dagger-spi-2.14.1.jar
+Source32 : https://repo1.maven.org/maven2/com/google/errorprone/javac-shaded/9-dev-r4023-3/javac-shaded-9-dev-r4023-3.jar
 
 %description
 # TensorBoard ![Travis build status](https://travis-ci.org/tensorflow/tensorboard.svg?branch=master)
@@ -48,6 +56,7 @@ Source25 : https://github.com/bazelbuild/rules_closure/archive/0.7.0.tar.gz
 %prep
 %setup -q -n tensorboard-1.10.0
 %patch1 -p1
+%patch2 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -84,6 +93,14 @@ InstallCache %{SOURCE22}
 InstallCache %{SOURCE23}
 InstallCache %{SOURCE24}
 InstallCache %{SOURCE25}
+InstallCache %{SOURCE26}
+InstallCache %{SOURCE27}
+InstallCache %{SOURCE28}
+InstallCache %{SOURCE29}
+InstallCache %{SOURCE30}
+InstallCache %{SOURCE31}
+InstallCache %{SOURCE32}
+
 
 
 bazel clean
