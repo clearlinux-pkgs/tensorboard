@@ -1,8 +1,8 @@
 Name     : tensorboard
-Version  : 1.11.0
+Version  : 1.12.0
 Release  : 8
-URL      : https://github.com/tensorflow/tensorboard/archive/1.11.0.tar.gz
-Source0  : https://github.com/tensorflow/tensorboard/archive/1.11.0.tar.gz
+URL      : https://github.com/tensorflow/tensorboard/archive/1.12.0.tar.gz
+Source0  : https://github.com/tensorflow/tensorboard/archive/1.12.0.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -50,7 +50,7 @@ Source31 : https://repo1.maven.org/maven2/com/google/dagger/dagger-spi/2.14.1/da
 Source32 : https://repo1.maven.org/maven2/com/google/errorprone/javac-shaded/9-dev-r4023-3/javac-shaded-9-dev-r4023-3.jar
 Source33 : https://raw.githubusercontent.com/cpettitt/graphlib/v2.1.5/dist/graphlib.core.js
 Source34 : https://raw.githubusercontent.com/cpettitt/dagre/v0.8.2/dist/dagre.core.js
-Source35 : https://github.com/d3/d3/releases/download/v4.13.0/d3.zip
+Source35 : https://github.com/d3/d3/releases/download/v5.7.0/d3.zip
 Source36 : https://registry.npmjs.org/plottable/-/plottable-3.7.0.tgz
 Source37 : https://github.com/lodash/lodash/archive/4.17.5.tar.gz
 Source38 : https://github.com/pair-code/facets/archive/0.2.1.tar.gz
@@ -59,7 +59,7 @@ Source38 : https://github.com/pair-code/facets/archive/0.2.1.tar.gz
 # TensorBoard ![Travis build status](https://travis-ci.org/tensorflow/tensorboard.svg?branch=master)
 
 %prep
-%setup -q -n tensorboard-1.11.0
+%setup -q -n tensorboard-1.12.0
 %patch1 -p1
 
 %build
@@ -123,7 +123,7 @@ bazel run //tensorboard/pip_package:build_pip_package
 %install
 export SOURCE_DATE_EPOCH=1503005760
 rm -rf %{buildroot}
-pip3 install --no-deps --force-reinstall  --root %{buildroot} /tmp/tensorboard/dist/tensorboard-1.11.0-py3-none-any.whl
+pip3 install --no-deps --force-reinstall  --root %{buildroot} /tmp/tensorboard/dist/tensorboard-1.12.0-py3-none-any.whl
 
 %files
 %defattr(-,root,root,-)
