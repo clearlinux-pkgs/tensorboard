@@ -1,6 +1,6 @@
 Name     : tensorboard
 Version  : 1.12.0
-Release  : 8
+Release  : 9
 URL      : https://github.com/tensorflow/tensorboard/archive/1.12.0.tar.gz
 Source0  : https://github.com/tensorflow/tensorboard/archive/1.12.0.tar.gz
 Summary  : No detailed summary available
