@@ -1,8 +1,8 @@
 Name     : tensorboard
-Version  : 1.12.0
+Version  : 1.13.0
 Release  : 10
-URL      : https://github.com/tensorflow/tensorboard/archive/1.12.0.tar.gz
-Source0  : https://github.com/tensorflow/tensorboard/archive/1.12.0.tar.gz
+URL      : https://github.com/tensorflow/tensorboard/archive/1.13.0.tar.gz
+Source0  : https://github.com/tensorflow/tensorboard/archive/1.13.0.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -25,10 +25,10 @@ BuildRequires : python-core
 Source9 : http://localhost/tensorflow/buildcache-1.11.tar.gz
 
 
-Source10 : https://github.com/tensorflow/tensorflow/archive/9752b117ff63f204c4975cad52b5aab5c1f5e9a9.tar.gz
-Source11 : https://github.com/google/protobuf/archive/v3.6.0.tar.gz
+Source10 : https://github.com/tensorflow/tensorflow/archive/6ef428bd6e83b0930266bf922eaa2f4a60e8328a.tar.gz
+Source11 : https://github.com/protocolbuffers/protobuf/archive/v3.6.1.2.tar.gz
 Source12 : https://raw.githubusercontent.com/catapult-project/catapult/237aea8b58a37a2991318b6a0db60d84078e5f7e/trace_viewer_full.html
-Source13 : https://pypi.python.org/packages/b7/7f/44d3cfe5a12ba002b253f6985a4477edfa66da53787a2a838a40f6415263/Werkzeug-0.11.10.tar.gz
+Source13 : https://files.pythonhosted.org/packages/fe/7f/6d70f765ce5484e07576313897793cb49333dd34e462488ee818d17244af/Werkzeug-0.11.15.tar.gz
 Source14 : https://github.com/google/closure-compiler/archive/v20180402.tar.gz
 Source15 : https://repo1.maven.org/maven2/com/google/template/soy/2018-03-14/soy-2018-03-14.jar
 Source16 : https://raw.githubusercontent.com/Microsoft/TypeScript/v2.9.2/lib/tsc.js
@@ -54,12 +54,18 @@ Source35 : https://github.com/d3/d3/releases/download/v5.7.0/d3.zip
 Source36 : https://registry.npmjs.org/plottable/-/plottable-3.7.0.tgz
 Source37 : https://github.com/lodash/lodash/archive/4.17.5.tar.gz
 Source38 : https://github.com/pair-code/facets/archive/0.2.1.tar.gz
+Source39 : https://github.com/bazelbuild/bazel-skylib/archive/e9fc4750d427196754bebb0e2e1e38d68893490a.tar.gz
+Source40 :  https://github.com/bazelbuild/rules_go/releases/download/0.16.3/rules_go-0.16.3.tar.gz
+Source41 : https://github.com/bazelbuild/bazel-gazelle/releases/download/0.15.0/bazel-gazelle-0.15.0.tar.gz
+Source42 :  https://github.com/bazelbuild/rules_webtesting/archive/0.2.2.tar.gz
+Source43 : https://dl.google.com/go/go1.11.2.linux-amd64.tar.gz
+Source44 : https://mirror.bazel.build/openjdk/azul-zulu-9.0.7.1-jdk9.0.7/zulu9.0.7.1-jdk9.0.7-linux_x64-allmodules.tar.gz
 
 %description
 # TensorBoard ![Travis build status](https://travis-ci.org/tensorflow/tensorboard.svg?branch=master)
 
 %prep
-%setup -q -n tensorboard-1.12.0
+%setup -q -n tensorboard-1.13.0
 %patch1 -p1
 
 %build
@@ -110,6 +116,12 @@ InstallCache %{SOURCE35}
 InstallCache %{SOURCE36}
 InstallCache %{SOURCE37}
 InstallCache %{SOURCE38}
+InstallCache %{SOURCE39}
+InstallCache %{SOURCE40}
+InstallCache %{SOURCE41}
+InstallCache %{SOURCE42}
+InstallCache %{SOURCE43}
+InstallCache %{SOURCE44}
 
 
 
@@ -123,7 +135,7 @@ bazel run //tensorboard/pip_package:build_pip_package
 %install
 export SOURCE_DATE_EPOCH=1503005760
 rm -rf %{buildroot}
-pip3 install --no-deps --force-reinstall  --root %{buildroot} /tmp/tensorboard/dist/tensorboard-1.12.0-py3-none-any.whl
+pip3 install --no-deps --force-reinstall  --root %{buildroot} /tmp/tensorboard/dist/tensorboard-1.13.0-py3-none-any.whl
 
 %files
 %defattr(-,root,root,-)
