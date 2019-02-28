@@ -1,6 +1,6 @@
 Name     : tensorboard
 Version  : 1.13.0
-Release  : 10
+Release  : 11
 URL      : https://github.com/tensorflow/tensorboard/archive/1.13.0.tar.gz
 Source0  : https://github.com/tensorflow/tensorboard/archive/1.13.0.tar.gz
 Summary  : No detailed summary available
