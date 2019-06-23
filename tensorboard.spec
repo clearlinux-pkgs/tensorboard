@@ -155,7 +155,7 @@ InstallCache %{SOURCE57}
 
 bazel clean
 bazel build --repository_cache=/tmp/cache  --incompatible_disable_deprecated_attr_params=false --incompatible_new_actions_api=false --incompatible_depset_is_not_iterable=false  --incompatible_no_support_tools_in_action_inputs=false  tensorboard/pip_package:build_pip_package
-bazel run --incompatible_disable_deprecated_attr_params=false //tensorboard/pip_package:build_pip_package
+bazel run --incompatible_disable_deprecated_attr_params=false  --incompatible_new_actions_api=false --incompatible_depset_is_not_iterable=false  --incompatible_no_support_tools_in_action_inputs=false   //tensorboard/pip_package:build_pip_package
 
 
 
