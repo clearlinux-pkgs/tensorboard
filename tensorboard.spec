@@ -1,6 +1,6 @@
 Name     : tensorboard
 Version  : 1.14.0
-Release  : 12
+Release  : 13
 URL      : https://github.com/tensorflow/tensorboard/archive/1.14.0.tar.gz
 Source0  : https://github.com/tensorflow/tensorboard/archive/1.14.0.tar.gz
 Summary  : No detailed summary available
@@ -20,7 +20,7 @@ BuildRequires : wheel
 BuildRequires : six
 BuildRequires : curl
 BuildRequires : virtualenv
-BuildRequires : python-core
+BuildRequires : python3-core
 
 Source9 : http://localhost/tensorflow/buildcache-1.11.tar.gz
 
