@@ -1,6 +1,6 @@
 Name     : tensorboard
 Version  : 1.15.0
-Release  : 15
+Release  : 16
 URL      : https://github.com/tensorflow/tensorboard/archive/1.15.0.tar.gz
 Source0  : https://github.com/tensorflow/tensorboard/archive/1.15.0.tar.gz
 Summary  : No detailed summary available
@@ -38,7 +38,7 @@ Source19 : http://repo1.maven.org/maven2/com/google/javascript/closure-compiler-
 Source20 : https://repo1.maven.org/maven2/com/google/auto/value/auto-value/1.6/auto-value-1.6.jar
 Source21 : http://maven.ibiblio.org/maven2/com/ibm/icu/icu4j/57.1/icu4j-57.1.jar
 Source22 : https://github.com/google/closure-library/archive/v20190415.tar.gz
-Source23 : http://nodejs.org/dist/v6.9.1/node-v10.16.0-linux-x64.tar.xz
+Source23 : http://nodejs.org/dist/v10.16.0/node-v10.16.0-linux-x64.tar.xz
 Source24 : https://github.com/PolymerElements/paper-card/archive/v1.1.6.tar.gz
 Source25 : https://github.com/bazelbuild/rules_closure/archive/7434c41542ca9e1b05166d897b90073d1b8b2cf8.tar.gz
 Source26 : https://repo1.maven.org/maven2/com/google/dagger/dagger/2.14.1/dagger-2.14.1.jar
@@ -109,11 +109,11 @@ popd
 # as dependencies are growing large, instead a buildcache-1.15.0
 # is populating all the possible hits for building
 
-#InstallCache() {
-#	sha256=`sha256sum $1 | cut -f1 -d" "`
-#	mkdir -p /tmp/cache/content_addressable/sha256/$sha256/
-#	cp $1 /tmp/cache/content_addressable/sha256/$sha256/file
-#}
+InstallCache() {
+	sha256=`sha256sum $1 | cut -f1 -d" "`
+	mkdir -p /tmp/cache/content_addressable/sha256/$sha256/
+	cp $1 /tmp/cache/content_addressable/sha256/$sha256/file
+}
 
 
 #InstallCache %{SOURCE10}
@@ -129,7 +129,7 @@ popd
 #InstallCache %{SOURCE20}
 #InstallCache %{SOURCE21}
 #InstallCache %{SOURCE22}
-#InstallCache %{SOURCE23}
+InstallCache %{SOURCE23}
 #InstallCache %{SOURCE24}
 #InstallCache %{SOURCE25}
 #InstallCache %{SOURCE26}
