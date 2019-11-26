@@ -1,8 +1,8 @@
 Name     : tensorboard
-Version  : 1.15.0
-Release  : 19
-URL      : https://github.com/tensorflow/tensorboard/archive/1.15.0.tar.gz
-Source0  : https://github.com/tensorflow/tensorboard/archive/1.15.0.tar.gz
+Version  : 2.0.0
+Release  : 20
+URL      : https://github.com/tensorflow/tensorboard/archive/2.0.0.tar.gz
+Source0  : https://github.com/tensorflow/tensorboard/archive/2.0.0.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -22,7 +22,7 @@ BuildRequires : curl
 BuildRequires : virtualenv
 BuildRequires : python3-core
 
-Source9 : http://localhost/tensorflow/buildcache-1.15.0.tar.gz
+Source9 : http://localhost/tensorflow/buildcache-2.0.0.tar.gz
 
 
 Source10 : https://github.com/tensorflow/tensorflow/archive/2243bd6ba9b36d43dbd5c0ede313853f187f5dce.tar.gz
@@ -74,13 +74,13 @@ Source55 : https://unpkg.com/umap-js@1.0.5/lib/umap-js.min.js
 Source56 : https://raw.githubusercontent.com/tensorflow/graphics/cd8c42f9ca260f77c6acfecd42e66ef01d1a3766/tensorflow_graphics/tensorboard/mesh_visualizer/tf_mesh_dashboard/array-buffer-data-provider.js
 Source57 :  https://raw.githubusercontent.com/tensorflow/graphics/cd8c42f9ca260f77c6acfecd42e66ef01d1a3766/tensorflow_graphics/tensorboard/mesh_visualizer/tf_mesh_dashboard/mesh-viewer.js
 Source58 : https://github.com/bazelbuild/rules_nodejs/releases/download/0.34.0/rules_nodejs-0.34.0.tar.gz
-Source59 : http://localhost/tensorflow/buildyarncache-1.15.0.tar.gz
+Source59 : http://localhost/tensorflow/buildyarncache-2.0.0.tar.gz
 
 %description
 # TensorBoard ![Travis build status](https://travis-ci.org/tensorflow/tensorboard.svg?branch=master)
 
 %prep
-%setup -q -n tensorboard-1.15.0
+%setup -q -n tensorboard-2.0.0
 # patch not needed on version 1.15.0
 #%patch1 -p1
 
@@ -129,7 +129,7 @@ InstallCache() {
 #InstallCache %{SOURCE20}
 #InstallCache %{SOURCE21}
 #InstallCache %{SOURCE22}
-InstallCache %{SOURCE23}
+#InstallCache %{SOURCE23}
 #InstallCache %{SOURCE24}
 #InstallCache %{SOURCE25}
 #InstallCache %{SOURCE26}
@@ -177,7 +177,7 @@ bazel run --incompatible_disable_deprecated_attr_params=false  --incompatible_ne
 %install
 export SOURCE_DATE_EPOCH=1503005760
 rm -rf %{buildroot}
-pip3 install --no-deps --force-reinstall  --root %{buildroot} /tmp/tensorboard/tensorboard-1.15.0-py3-none-any.whl
+pip3 install --no-deps --force-reinstall  --root %{buildroot} /tmp/tensorboard/tensorboard-2.0.0-py3-none-any.whl
 
 %files
 %defattr(-,root,root,-)
