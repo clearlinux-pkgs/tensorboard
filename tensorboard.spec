@@ -1,6 +1,6 @@
 Name     : tensorboard
 Version  : 2.0.0
-Release  : 21
+Release  : 22
 URL      : https://github.com/tensorflow/tensorboard/archive/2.0.0.tar.gz
 Source0  : https://github.com/tensorflow/tensorboard/archive/2.0.0.tar.gz
 Summary  : No detailed summary available
@@ -181,7 +181,7 @@ pip3 install --no-deps --force-reinstall  --root %{buildroot} /tmp/tensorboard/t
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/python3.7/site-packages/
+/usr/lib/python3*/site-packages/
 /usr/bin/tensorboard
 
 
