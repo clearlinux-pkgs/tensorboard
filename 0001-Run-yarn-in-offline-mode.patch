@@ -1,0 +1,22 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Patrick McCarty <patrick.mccarty@intel.com>
+Date: Wed, 14 Oct 2020 19:56:44 +0000
+Subject: [PATCH] Run yarn in offline mode
+
+Signed-off-by: Patrick McCarty <patrick.mccarty@intel.com>
+---
+ WORKSPACE | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/WORKSPACE b/WORKSPACE
+index 72fb292..c1bf210 100644
+--- a/WORKSPACE
++++ b/WORKSPACE
+@@ -70,6 +70,7 @@ yarn_install(
+     # removes source directory without `bazel clean` which creates broken
+     # symlink into node_modules folder.
+     symlink_node_modules = False,
++    args = ["--offline", "--verbose"],
+ )
+ 
+ load("@npm//:install_bazel_dependencies.bzl", "install_bazel_dependencies")

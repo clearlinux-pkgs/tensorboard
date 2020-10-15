@@ -17,3 +17,17 @@ commitmsg
 results/
 rpms/
 for-review.txt
+testresults
+*.html
+*.js
+*.ts
+*.woff2
+*.svg
+bazelsources
+yarnsources
+# If committing a license source file, name it <COMPONENT>_LICENSE instead of
+# the generic names below.
+LICENSE
+LICENSE.txt
+license.txt
+license.rst.txt
