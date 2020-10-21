@@ -1,6 +1,6 @@
 Name     : tensorboard
 Version  : 2.3.0
-Release  : 24
+Release  : 25
 URL      : https://github.com/tensorflow/tensorboard/archive/2.3.0/tensorboard-2.3.0.tar.gz
 Source0  : https://github.com/tensorflow/tensorboard/archive/2.3.0/tensorboard-2.3.0.tar.gz
 Summary  : TensorFlow's visualization toolkit
@@ -212,7 +212,7 @@ Source176: https://github.com/vaadin/vaadin-split-layout/archive/v1.1.0/vaadin-s
 Source177: https://github.com/web-animations/web-animations-js/archive/2.2.1/web-animations-js-2.2.1.tar.gz
 Source178: https://github.com/webcomponents/shadycss/archive/v1.9.1/shadycss-1.9.1.tar.gz
 Source179: https://github.com/webcomponents/webcomponentsjs/archive/v1.3.3/webcomponentsjs-1.3.3.tar.gz
-Source180: https://mirror.bazel.build/bazel_java_tools/releases/javac11/v9.0/java_tools_javac11_linux-v9.0.zip
+Source180: https://mirror.bazel.build/bazel_java_tools/releases/javac11/v10.0/java_tools_javac11_linux-v10.0.zip
 Source181: https://mirror.bazel.build/github.com/bazelbuild/rules_cc/archive/b7fe9697c0c76ab2fd431a891dbb9a6a32ed7c3e.tar.gz
 Source182: https://mirror.bazel.build/github.com/bazelbuild/rules_java/archive/981f06c3d2bd10225e85209904090eb7b5fb26bd.tar.gz
 Source183: https://mirror.bazel.build/github.com/bazelbuild/rules_proto/archive/97d8af4dc474595af3900dd85cb3a29ad28cc313.tar.gz
@@ -595,7 +595,6 @@ bazel clean --expunge
 
 bazel build \
   --repository_cache=/var/tmp/cache \
-  --record_rule_instantiation_callstack \
   --verbose_failures \
   //tensorboard/pip_package:build_pip_package
 
@@ -604,7 +603,6 @@ mkdir -p /var/tmp/tensorboard/
 
 bazel run \
   --repository_cache=/var/tmp/cache \
-  --record_rule_instantiation_callstack \
   --verbose_failures \
   //tensorboard/pip_package:build_pip_package -- /var/tmp/tensorboard
 
