@@ -1,6 +1,6 @@
 Name     : tensorboard
 Version  : 2.3.0
-Release  : 25
+Release  : 26
 URL      : https://github.com/tensorflow/tensorboard/archive/2.3.0/tensorboard-2.3.0.tar.gz
 Source0  : https://github.com/tensorflow/tensorboard/archive/2.3.0/tensorboard-2.3.0.tar.gz
 Summary  : TensorFlow's visualization toolkit
